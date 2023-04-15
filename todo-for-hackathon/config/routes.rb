@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'members/index'
+  get 'members/new' => 'members#new'
+  post 'members/create' => 'members#create'
   get 'user_page/todo'
   get 'user_page/user_top'
   get '/' => 'home#top'

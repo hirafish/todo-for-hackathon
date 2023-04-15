@@ -1,0 +1,22 @@
+
+<h1 >Members Profile</h1>
+<%= link_to "新規投稿", "/members/new"%>
+<br>
+
+<br>
+<% @profiles.each do |profile|%>
+<div style=" color: white; background: #f98289; padding: 20px; border: 2px dashed rgba(255 , 255 , 255 , 0.5);-moz-border-radius: 6px; -moz-box-shadow: 0 0 0 5px #f98289 , 0 2px 3px 5px rgba(0 , 0 , 0 , 0.5); -webkit-border-radius: 6px; -webkit-box-shadow: 0 0 0 5px #f98289 , 0 2px 3px 5px rgba(0 , 0 , 0 , 0.5); border-radius: 6px; box-shadow: 0 0 0 5px #f98289 , 0 2px 3px 5px rgba(0 , 0 , 0 , 0.5); font-size: 100%; "> 
+    名前
+    <%= profile.name %>
+    <br>
+    使用可能な技術
+    <%= profile.can_use_tech %>
+    <br>
+    コメント
+    <%= profile.comment %>
+    </div>
+    <br>
+    
+<% end %>
+
+</body>
