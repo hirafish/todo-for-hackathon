@@ -8,7 +8,9 @@ class MembersController < ApplicationController
   end
 
   def create
-    @profile = Profile.new(name: params[:name], can_use_tech: params[:can_use_tech], comment: params[:comment])
+    puts "==== params.inspect ===="
+    puts params.inspect
+    @profile = Profile.new(name: params[:name], can_use_tech: params[:can_use_tech], comment: params[:comment], color: params[:input_color])
     @profile.save
     redirect_to "/members/index"
   end
