@@ -1,21 +1,36 @@
-<%= form_with url: "/members/create", model: @profile, local: true do |form| %>
-
+<%= form_tag("/members/create") do |form| %>
 名前を入力
-<p><%= form.label :name %><br>
-<%= form.text_field :name %>
+<p>
+<textarea name="name"></textarea>
 </p>
 
 使用可能な技術を入力()内にレベル感
-<p><%= form.label :can_use_tech %><br>
-<%= form.text_area :can_use_tech %> 
+<p><textarea name="can_use_tech"></textarea>
 </p>
 
 なにかひとこと！
-<p><%= form.label :comment %><br>
-<%= form.text_area :comment %> 
+<p><textarea name="comment"></textarea>
 </p>
+気になる色(プロフィールの背景色になるよ！文字は白色です)
+<p><input type="color" name="input_color" list="color1" value="#002b55"></p>
 
-<p><%= form.submit %>
-</p>
+<datalist id="color1">
+<option value="#C8AFAF"></option>
+<option value="#A7AFAF"></option>
+<option value="#9BC2AB"></option>
+<option value="#B5D9DB"></option>
+<option value="#D69DD5"></option>
+<option value="#B7B8D4"></option>
+<option value="#E1B8B6"></option>
+<option value="#759D9F"></option>
+<option value="#D6DBA9"></option>
+<option value="#e0815e"></option>
+<option value="#f3bf88"></option>
+<option value="#bb9a7b"></option>
+</datalist>
+
+
+<input type="submit" value="投稿">
+
 
 <% end %>

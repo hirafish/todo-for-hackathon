@@ -5,6 +5,7 @@ class CreateProfiles < ActiveRecord::Migration[7.0]
       t.text :name
       t.text :can_use_tech
       t.text :comment
+      t.string :color 
 
       t.timestamps
     end
