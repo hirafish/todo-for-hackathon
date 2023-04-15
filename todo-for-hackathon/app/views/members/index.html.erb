@@ -37,18 +37,19 @@
     <table>
     <tr>
     <td>&nbsp;</td>
-    <td><%= button_to("編集", "/members/#{profile.id}/edit", 
-            style:" font-size: 13px;
-                    font-weight: bold;
-                    padding: 0.4em 1em 0.2em;
-                    display: inline-block;
-                    color: gray;
-                    border: #{profile.color} dashed 1px;
-                    box-shadow: 0 0 0 0.2em white;
-                    margin: 0 10px 0 0;
-                    border-radius: 2.5px;
-                    background-color: white;
-                    cursor: pointer;") %>
+    <td><%= link_to("編集", "/members/#{profile.id}/edit", 
+    style: " font-size: 13px;
+             font-weight: bold;
+             padding: 0.4em 1em 0.2em;
+             display: inline-block;
+             color: gray;
+             border: #{profile.color} dashed 1px;
+             box-shadow: 0 0 0 0.2em white;
+             margin: 0 10px 0 0;
+             border-radius: 2.5px;
+             background-color: white;
+             cursor: pointer;
+             text-decoration: none;") %>
     </td>
     &nbsp; &nbsp;
     <td><%= button_to("削除", "/members/#{profile.id}/destroy", method: "post", onclick: "confirmDestroyNavigation(event)", 
