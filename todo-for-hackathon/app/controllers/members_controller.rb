@@ -14,4 +14,21 @@ class MembersController < ApplicationController
     @profile.save
     redirect_to "/members/index"
   end
+
+  def edit
+    @profile = Profile.find_by(id: params[:id])
+  end
+
+  def destroy
+  end
+
+  def update
+      @profile = Profile.find_by(id: params[:id])
+      @profile.name = params[:name]
+      @profile.can_use_tech = params[:can_use_tech]
+      @profile.comment = params[:comment]
+      @profile.color = params[:input_color]
+      @profile.save
+      redirect_to("/members/index")
+  end
 end

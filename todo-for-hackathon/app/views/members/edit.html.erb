@@ -1,0 +1,42 @@
+<head>
+    <%= javascript_include_tag "custom" %>
+</head>
+<h1 style="padding: .3em;
+	border-bottom: 2px dashed pink; color: #efbbcd">編集</h1>
+<%= form_tag("/members/#{@profile.id}/update") do |form| %>
+名前を入力
+<p>
+<textarea name="name"><%= @profile.name %></textarea>
+</p>
+
+使用可能な技術を入力()内にレベル感
+<p><textarea name="can_use_tech"><%= @profile.can_use_tech %></textarea>
+</p>
+
+なにかひとこと！
+<p><textarea name="comment"><%= @profile.comment %></textarea>
+</p>
+気になる色(プロフィールの背景色になるよ！文字は白色です)
+<p><input type="color" name="input_color" list="color1" value=<%= @profile.color %>></p>
+
+<datalist id="color1">
+<option value="#C8AFAF"></option>
+<option value="#A7AFAF"></option>
+<option value="#9BC2AB"></option>
+<option value="#B5D9DB"></option>
+<option value="#D69DD5"></option>
+<option value="#B7B8D4"></option>
+<option value="#E1B8B6"></option>
+<option value="#759D9F"></option>
+<option value="#D6DBA9"></option>
+<option value="#e0815e"></option>
+<option value="#f3bf88"></option>
+<option value="#bb9a7b"></option>
+</datalist>
+
+<input type="submit" value="編集">
+
+
+<% end %>
+<br>
+<%= link_to("編集しないで戻る", "/members/index", onclick: "confirmNavigation(event)")%>

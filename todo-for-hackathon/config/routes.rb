@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'user_page/todo'
   get 'user_page/user_top'
   get '/' => 'home#top'
+  get 'members/:id/edit' => 'members#edit'
+  post 'members/:id/update' => 'members#update'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
