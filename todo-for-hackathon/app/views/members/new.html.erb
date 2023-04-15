@@ -1,0 +1,21 @@
+<%= form_with url: "/members/create", model: @profile, local: true do |form| %>
+
+名前を入力
+<p><%= form.label :name %><br>
+<%= form.text_field :name %>
+</p>
+
+使用可能な技術を入力()内にレベル感
+<p><%= form.label :can_use_tech %><br>
+<%= form.text_area :can_use_tech %> 
+</p>
+
+なにかひとこと！
+<p><%= form.label :comment %><br>
+<%= form.text_area :comment %> 
+</p>
+
+<p><%= form.submit %>
+</p>
+
+<% end %>
