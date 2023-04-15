@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/' => 'home#top'
   get 'members/:id/edit' => 'members#edit'
   post 'members/:id/update' => 'members#update'
+  post 'members/:id/destroy' => 'members#destroy'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

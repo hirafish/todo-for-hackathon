@@ -1,3 +1,6 @@
+<head>
+    <%= javascript_include_tag "custom" %>
+</head>
 <h1 style="padding: .3em;
 	border-bottom: 2px dashed pink; color: #efbbcd">Members Profile</h1>
 <div  style="display:inline-block; position: relative;  margin: 1em 0 2em 40px; background: #efbbcc; border-radius: 20px; font-size: 100%; padding: 20px;"><span  style="  position: absolute; left: -38px; width: 13px; height: 12px; bottom: 0; background: #efbbcc; border-radius: 50%; "></span>
@@ -10,29 +13,59 @@
 <div style=" color: white; background: <%= profile.color %>; margin: 5px 5% 0px 5%;padding: 20px; border: 2px dashed rgba(255 , 255 , 255 , 0.5);-moz-border-radius: 6px; -moz-box-shadow: 0 0 0 5px #f98289 , 0 2px 3px 5px rgba(0 , 0 , 0 , 0.5); -webkit-border-radius: 6px; -webkit-box-shadow: 0 0 0 5px #f98289 , 0 2px 3px 5px rgba(0 , 0 , 0 , 0.5); border-radius: 6px; box-shadow: 0 0 0 5px <%= profile.color %> , 0 2px 3px 5px rgba(0 , 0 , 0 , 0.5); font-size: 90%; "> 
     <b>&emsp;名前</b>
     <br>
-    <div style="border: <%= profile.color %> solid 1px; border-left: <%= profile.color %> solid 10px; padding: 15px; background: #fff; font-size: 100%;">
-    <div style="color:black; font-size: 80%;">
+    <div style="border-radius:6px; padding: 10px;margin: 5px; background: #fff; font-size: 100%;">
+    <div style="color:dimgray; font-size: 100%;">
     <%= profile.name %>
     </div>
     </div>
     <br>
     <b>&emsp;使用可能な技術</b>
     <br>
-    <div style="border: <%= profile.color %> solid 1px; border-left: <%= profile.color %> solid 10px; padding: 15px; background: #fff; font-size: 100%;">
-    <div style="color:black; font-size: 80%;">
+    <div style="border-radius:6px; padding: 10px;margin: 5px; background: #fff; font-size: 100%;">
+    <div style="color:dimgray; font-size: 100%;">
     <%= profile.can_use_tech %>
     </div>
     </div>
     <br>
     <b>&emsp;コメント</b>
-    <div style="border: <%= profile.color %> solid 1px; border-left: <%= profile.color %> solid 10px; padding: 15px; background: #fff; font-size: 100%;">
-    <div style="color:black; font-size: 80%;"><%= profile.comment %></div></div>
+    <div style="border-radius:6px; padding: 10px;margin: 5px; background: #fff; font-size: 100%;">
+    <div style="color:dimgray; font-size: 100%;"><%= profile.comment %></div></div>
 
     <div style="margin-top:5px">
     &nbsp;
-    <%= link_to("編集", "/members/#{profile.id}/edit") %>
-    &emsp;
-    <%# <%= link_to("削除", "/members/#{profile.id}/edit") %> 
+    &nbsp;
+    <table>
+    <tr>
+    <td>&nbsp;</td>
+    <td><%= button_to("編集", "/members/#{profile.id}/edit", 
+            style:" font-size: 13px;
+                    font-weight: bold;
+                    padding: 0.4em 1em 0.2em;
+                    display: inline-block;
+                    color: gray;
+                    border: #{profile.color} dashed 1px;
+                    box-shadow: 0 0 0 0.2em white;
+                    margin: 0 10px 0 0;
+                    border-radius: 2.5px;
+                    background-color: white;
+                    cursor: pointer;") %>
+    </td>
+    &nbsp; &nbsp;
+    <td><%= button_to("削除", "/members/#{profile.id}/destroy", method: "post", onclick: "confirmDestroyNavigation(event)", 
+            style:" font-size: 13px;
+                    font-weight: bold;
+                    padding: 0.4em 1em 0.2em;
+                    display: inline-block;
+                    color: white;
+                    border: gray dashed 1px;
+                    box-shadow: 0 0 0 0.2em gray;
+                    margin: 0 5px 0 0;
+                    border-radius: 2.5px;
+                    background-color: gray;
+                    cursor: pointer;") %>
+                    </td>
+    </tr>
+</table>
     </div>
     </div>
     

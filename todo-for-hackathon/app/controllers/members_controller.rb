@@ -20,6 +20,9 @@ class MembersController < ApplicationController
   end
 
   def destroy
+    @profile = Profile.find_by(id: params[:id])
+    @profile.destroy
+    redirect_to("/members/index")
   end
 
   def update
