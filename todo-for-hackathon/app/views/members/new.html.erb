@@ -1,3 +1,11 @@
+<head>
+<%= javascript_include_tag "custom" %>
+
+</head>
+
+<body style="background:pink">
+<h1 style="padding: .3em;
+	border-bottom: 2px dashed white">新規投稿</h1>
 <%= form_tag("/members/create") do |form| %>
 名前を入力
 <p>
@@ -29,8 +37,10 @@
 <option value="#bb9a7b"></option>
 </datalist>
 
-
 <input type="submit" value="投稿">
 
 
 <% end %>
+<br>
+<%= link_to("投稿しないで戻る", "/members/index", onclick: "confirmNavigation(event)")%>
+</body>
