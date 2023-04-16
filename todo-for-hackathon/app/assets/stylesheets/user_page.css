@@ -6,7 +6,7 @@ header h1 {
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: white;
+  background-color: pink;
 }
 
 .grid-container {
@@ -99,6 +99,22 @@ label {
   margin-top: 0.4rem;
 }
 
-.new_user{
-  margin-left: 5%;
+.member_icon{
+  width: 15%;
+  height: auto;
+}
+
+.withouttime{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MEMBER_link{
+  text-align: center;
+  margin-left: 10px;
+}
+
+.TODO_link{
+  text-align: center;
 }
