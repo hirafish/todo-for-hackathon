@@ -2,9 +2,9 @@
     <%= javascript_include_tag "custom" %>
 </head>
 
-<body style="margin-left:10px">
+<body style="margin-left:10px;background:white">
 <h1 style="padding: .3em;
-	border-bottom: 2px dashed pink; color: #efbbcd">編集</h1>
+	border-bottom: 2px dashed pink; color: pink">編集</h1>
 <%= form_tag("/members/#{@profile.id}/update") do |form| %>
 名前を入力
 <p>
