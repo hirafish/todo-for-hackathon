@@ -12,14 +12,14 @@ body {
 
 /* Todoを追加する欄のCSS */
 .todo-form {
-    background-color: blueviolet;
+    background-color: white;
     padding: 15px;
 }
 
 /* .simple-calendar でカレンダー本体の中身のCSSを変更できる */
 
 .simple-calendar .calendar-heading {
-    background-color: aqua;
+    background-color: white;
 }
 
 .simple-calendar .wday-0 {
@@ -47,6 +47,9 @@ body {
     background-color: pink;
 }
 
+.select_time{
+    float: left;
+}
 
 
 
