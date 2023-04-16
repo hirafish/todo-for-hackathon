@@ -15,7 +15,17 @@
       <%= link_to("TODOリスト", "/user_page/todo", class:"TODO_link")  %>
     </div>
     <div class="grid-item withouttime">
-    <img class="member_icon" decording="async" src="/peace.png">
+    <img id="myImage" class="member_icon" decording="async" src="/peace.png">
+        <script>
+          var randomNum = Math.random();
+          if (randomNum < 0.9) {
+            document.getElementById("myImage").src = "/peace.png";
+          } else if (randomNum < 0.95) {
+            document.getElementById("myImage").src = "/sleep.png";
+          } else {
+            document.getElementById("myImage").src = "/noman.png";
+          }
+        </script>
       <%= link_to("MEMBER", "/members/index", class:"MEMBER_link")  %>
     </div>
     <div class="grid-item withouttime">
