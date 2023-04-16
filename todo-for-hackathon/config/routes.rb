@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'toodoos/index'
   get 'members/index'
   get 'members/new' => 'members#new'
   post 'members/create' => 'members#create'
@@ -8,6 +9,10 @@ Rails.application.routes.draw do
   get 'members/:id/edit' => 'members#edit'
   post 'members/:id/update' => 'members#update'
   post 'members/:id/destroy' => 'members#destroy'
+
+  root to: 'toodoos#index'
+  resources :toodoos
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

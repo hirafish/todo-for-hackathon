@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<div class="show">
+<p>
+  <strong>TODO</strong>
+  <%= @toodoo.title %>
+</p>
+
+<p>
+  <strong>内容</strong>
+  <%= @toodoo.content %>
+</p>
+
+<p>
+  <strong>期限</strong>
+  <%= @toodoo.start_time.strftime("%m-%d") %>
+</p>
+
+<%= link_to '編集', edit_toodoo_path(@toodoo) %>
+<%= button_to '消去',toodoo_path(@toodoo.id), method: :destroy, data: { confirm: '本当に削除しますか?' } %>
+<%= link_to '戻る', toodoos_path %>
+</div>

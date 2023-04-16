@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+}
+
+.toppage {
+    background-color: pink;
+}
+
+.toppage h1 {
+    padding: 0;
+}
+
+/* Todoを追加する欄のCSS */
+.todo-form {
+    background-color: blueviolet;
+    padding: 15px;
+}
+
+/* .simple-calendar でカレンダー本体の中身のCSSを変更できる */
+
+.simple-calendar .calendar-heading {
+    background-color: aqua;
+}
+
+.simple-calendar .wday-0 {
+    color: red;
+}
+
+.simple-calendar .wday-6 {
+    color: blue;
+}
+.simple-calendar tbody a {
+    color: black;
+    text-decoration:none;
+    font-family: 'Hachi Maru Pop', cursive;
+    display: inline-block;
+	transition: all .3s ease 0s;
+	text-decoration: none;
+}
+
+.simple-calendar tbody a:hover {
+    cursor: pointer;
+	transform: scale(1.2);
+}
+
+.simple-calendar th {
+    background-color: pink;
+}
+
+
+
+
+/* // .simple-calendar {
+//     .day {}
+  
+//     .wday-0 {}
+//     .wday-1 {}
+//     .wday-2 {}
+//     .wday-3 {}
+//     .wday-4 {}
+//     .wday-5 {}
+//     .wday-6 {}
+  
+//     .today {}
+//     .past {}
+//     .future {}
+  
+//     .start-date {}
+  
+//     .prev-month {}
+//     .next-month { }
+//     .current-month {}
+  
+//     .has-events {}
+//   } */
