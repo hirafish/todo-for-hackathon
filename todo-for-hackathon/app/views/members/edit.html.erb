@@ -1,6 +1,8 @@
 <head>
     <%= javascript_include_tag "custom" %>
 </head>
+
+<body style="margin-left:10px">
 <h1 style="padding: .3em;
 	border-bottom: 2px dashed pink; color: #efbbcd">編集</h1>
 <%= form_tag("/members/#{@profile.id}/update") do |form| %>
@@ -40,3 +42,4 @@
 <% end %>
 <br>
 <%= link_to("編集しないで戻る", "/members/index", onclick: "confirmNavigation(event)")%>
+</body>

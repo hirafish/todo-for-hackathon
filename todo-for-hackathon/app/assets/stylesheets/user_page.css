@@ -6,7 +6,7 @@ header h1 {
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: pink;
+  background-color: white;
 }
 
 .grid-container {
@@ -97,4 +97,8 @@ label {
   font-size: 2rem;
   color: gray;
   margin-top: 0.4rem;
+}
+
+.new_user{
+  margin-left: 5%;
 }
