@@ -10,6 +10,7 @@
 <span style=" position: absolute; left: -24px; width: 20px; height: 18px;  bottom: 3px; background: #efbbcc; border-radius: 50%;  margin: 0;  padding: 0;"></span></div>
 
 <% @profiles.each do |profile|%>
+<body style="background-color: white;">
 <div style=" color: white; background: <%= profile.color %>; margin: 5px 5% 0px 5%;padding: 20px; border: 2px dashed rgba(255 , 255 , 255 , 0.5);-moz-border-radius: 6px; -moz-box-shadow: 0 0 0 5px #f98289 , 0 2px 3px 5px rgba(0 , 0 , 0 , 0.5); -webkit-border-radius: 6px; -webkit-box-shadow: 0 0 0 5px #f98289 , 0 2px 3px 5px rgba(0 , 0 , 0 , 0.5); border-radius: 6px; box-shadow: 0 0 0 5px <%= profile.color %> , 0 2px 3px 5px rgba(0 , 0 , 0 , 0.5); font-size: 90%; "> 
     <b>&emsp;名前</b>
     <br>
@@ -72,5 +73,6 @@
     
     <br>
     
+</body>
 <% end %>
 
