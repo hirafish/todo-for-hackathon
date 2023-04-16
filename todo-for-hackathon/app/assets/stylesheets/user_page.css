@@ -1,0 +1,100 @@
+header h1 {
+  padding: 0.3em;
+  border-bottom: 2px dashed white;
+  color: white;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: pink;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.grid-item {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Countdown timer styles */
+.countdown-container {
+  position: relative;
+}
+
+#countdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.time {
+  background-color: #ffb6c1;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 60px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  margin-right: 0.5rem;
+}
+
+#deadline-input {
+  margin-right: 0.5rem;
+}
+
+#set-deadline {
+  background-color: #ffb6c1;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#set-deadline:hover {
+  background-color: #ffa4b8;
+}
+
+.text {
+  margin-bottom: 1%;
+  color: #db7093;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.ideamemo {
+  width: 50%;
+  height: auto;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-label {
+  font-size: 2rem;
+  color: gray;
+  margin-top: 0.4rem;
+}

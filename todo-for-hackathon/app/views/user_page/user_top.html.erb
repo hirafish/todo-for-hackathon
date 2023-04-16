@@ -1,5 +1,53 @@
-<h1>ユーザーページのトップ画面</h1>
-<div><%= link_to("TODOリスト", "/user_page/todo")  %></div>
-<div><%= link_to("メンバー紹介", "/members/index")  %></div>
-<div>アイデアメモ</div>
-<div>ハッカソン当日まであとN日</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= stylesheet_link_tag "user_page" %>
+    <%= javascript_include_tag "custom" %>
+</head>
+<body class="top-page">
+  <header>
+    <h1>ユーザーページのトップ画面</h1>
+  </header>
+
+<body>
+  <div class="grid-container">
+    <div class="grid-item">
+      <%= link_to("TODOリスト", "/user_page/todo")  %>
+    </div>
+    <div class="grid-item">
+      <%= link_to("メンバー紹介", "/members/index")  %>
+    </div>
+    <div class="grid-item">
+      <img class="ideamemo", decording="async" src="/ideamemo.png">
+    </div>
+    <div class="grid-item countdown-container">
+    <div class="text">ハッカソン締め切りまで</div>
+  <div id="countdown">
+  
+    <div class="time-block">
+      <div id="days" class="time"></div>
+      <span class="time-label">日</span>
+    </div>
+    <div class="time-block">
+      <div id="hours" class="time"></div>
+      <span class="time-label">時</span>
+    </div>
+    <div class="time-block">
+      <div id="minutes" class="time"></div>
+      <span class="time-label">分</span>
+    </div>
+    <div class="time-block">
+      <div id="seconds" class="time"></div>
+      <span class="time-label">秒</span>
+    </div>
+  </div>
+  <div class="input-container">
+    <label for="deadline-input">締め切り日時:</label>
+    <input type="datetime-local" id="deadline-input">
+    <button id="set-deadline">Set</button>
+  </div>
+</div>
+
+  </div>
+</body>
+</html>
